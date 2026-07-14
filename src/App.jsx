@@ -26,7 +26,7 @@ function App() {
   return (
     <ThemeContextProvider>
       <GlobalStyle />
-      <BrowserRouter>
+      <BrowserRouter basename="/portfolio-anu">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
