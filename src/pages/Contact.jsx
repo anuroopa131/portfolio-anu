@@ -61,7 +61,7 @@ const Contact = () => {
           <SiGmail size={20} />
         </IconLink>
         <IconLink
-          href="https://linkedin.com/in/your-linkedin-handle"
+          href="https://www.linkedin.com/in/anuroopa-shankar/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
@@ -69,7 +69,7 @@ const Contact = () => {
           <FaLinkedin size={22} />
         </IconLink>
         <IconLink
-          href="https://github.com/your-github-handle"
+          href="https://github.com/anuroopa131/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
