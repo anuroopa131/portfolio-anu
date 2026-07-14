@@ -51,11 +51,8 @@ const IconLink = styled.a`
 const Contact = () => {
   return (
     <Wrapper>
-      <Title>Get In Touch</Title>
-      <SubText>
-        Feel free to reach out for opportunities, collaborations, or just to
-        say hi.
-      </SubText>
+      <Title>Let's Connect</Title>
+      
       <IconRow>
         <IconLink href="mailto:anuroopa131@gmail.com" aria-label="Email">
           <SiGmail size={20} />

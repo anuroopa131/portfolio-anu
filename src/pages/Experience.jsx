@@ -50,7 +50,7 @@ const Bullets = styled.ul`
 const experiences = [
   {
     company: "Sysfore Technologies",
-    role: "Associate Software Developer Intern",
+    role: "Associate Software Engineer Trainee",
     duration: "May 2026 – Present",
     bullets: [
       "Undergoing structured training in ASP.NET Core and React.js, building full-stack modules with a focus on clean architecture and component-driven UI design.",

@@ -22,6 +22,8 @@ const Card = styled.div`
   border: 1px solid ${(props) => props.theme.border};
   border-radius: 10px;
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
 `;
 
 const ProjectName = styled.h3`
@@ -41,6 +43,7 @@ const TagRow = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-bottom: 1.2rem;
 `;
 
 // Small "pill" tags using the purple accent, tying visually back to the navbar
@@ -52,30 +55,54 @@ const Tag = styled.span`
   border-radius: 999px;
 `;
 
+// Pushed to the bottom of the card via margin-top: auto (Card is a flex
+// column), so all buttons line up evenly even if descriptions differ in length.
+const GithubButton = styled.a`
+  margin-top: auto;
+  align-self: flex-start;
+  background: transparent;
+  border: 1.5px solid ${(props) => props.theme.accent};
+  color: ${(props) => props.theme.accent};
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background: ${(props) => props.theme.accent};
+    color: #ffffff;
+  }
+`;
+
 const projects = [
   {
     name: "DocuChat",
     description:
       "A specialized AI chatbot optimized for secure technical communication. Research published in IJCRT Journal, December 2024.",
     tags: ["React.js", "Node.js", "Express.js", "MongoDB", "LLM Integration"],
+    github: "https://github.com/anuroopa131/DocuChat",
   },
   {
     name: "CredSafe",
     description:
       "A high-security credential manager built with end-to-end encryption. Research published in IJCRT Journal (ISSN: 2320-2882), December 2024.",
     tags: ["MongoDB", "Express.js", "React.js", "Node.js"],
+    github: "https://github.com/anuroopa131/CredSafe",
   },
   {
     name: "Ticket Management System",
     description:
       "A support portal with hierarchical RBAC and Java SMTP integration for real-time status notifications.",
     tags: ["Java", "Spring Boot", "React.js", "MySQL", "Spring Data JPA"],
+    github: "https://github.com/anuroopa131/Ticket-Management-System",
   },
   {
     name: "BunkMaster",
     description:
       "A student analytics dashboard with custom React hooks and Recharts for interactive attendance visualization.",
     tags: ["React.js", "Node.js", "Recharts", "MongoDB"],
+    github: "https://github.com/anuroopa131/BUNKMASTER",
   },
 ];
 
@@ -93,6 +120,13 @@ const Projects = () => {
                 <Tag key={tag}>{tag}</Tag>
               ))}
             </TagRow>
+            <GithubButton
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on GitHub →
+            </GithubButton>
           </Card>
         ))}
       </Grid>
