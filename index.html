@@ -9,6 +9,30 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <script type="text/javascript">
+      // Undoes the redirect trick from public/404.html.
+      // If we landed here via that redirect, the real intended path is
+      // hiding inside the query string as "?/experience" etc.
+      // This decodes it and rewrites the address bar back to the clean
+      // path BEFORE React/React Router loads, so React Router sees
+      // "/experience" like normal and renders the correct page.
+      (function (l) {
+        if (l.search[1] === "/") {
+          var decoded = l.search
+            .slice(1)
+            .split("&")
+            .map(function (s) {
+              return s.replace(/~and~/g, "&");
+            })
+            .join("?");
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      })(window.location);
+    </script>
   </head>
   <body>
     <!-- React takes over this single div and renders the entire app inside it -->
