@@ -121,14 +121,13 @@ const Home = () => {
           <IconLink href="mailto:anuroopa131@gmail.com" aria-label="Email">
             <SiGmail size={20} />
           </IconLink>
-         <IconLink
-  href="https://www.linkedin.com/in/anuroopa-shankar/"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="LinkedIn"
->
-  <FaLinkedin size={22} />
-</IconLink>
+          <IconLink
+          href="https://www.linkedin.com/in/anuroopa-shankar/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn">
+         <FaLinkedin size={22} />
+         </IconLink>
           <IconLink
             href="https://github.com/anuroopa131/"
             target="_blank"
